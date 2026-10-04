@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harish Shiyani | Java & Full Stack Developer</title>
+<meta name="description" content="Portfolio of Harish Shiyani, BCA graduate and Java / Full Stack Developer from Ahmedabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7f3;--surface:#fff;--ink:#12202f;--muted:#55636f;--line:#dde2dc;--accent:#2f7d1f;--accent-ink:#fff;--soft:#e8f1e3;--code:#0f1b2a;--code-ink:#d6e2ee;--code-key:#7bc65a;--code-str:#f0b968;
+--head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c141e;--surface:#131e2b;--ink:#e8eef4;--muted:#9aa9b6;--line:#243445;--accent:#7bc65a;--accent-ink:#0c141e;--soft:#172a1f;--code:#08101a}}
+:root[data-theme="dark"]{--bg:#0c141e;--surface:#131e2b;--ink:#e8eef4;--muted:#9aa9b6;--line:#243445;--accent:#7bc65a;--accent-ink:#0c141e;--soft:#172a1f;--code:#08101a}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:64px}
+.logo{font:800 1.15rem var(--head);text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;white-space:nowrap}
+nav a:hover{color:var(--ink);background:var(--soft)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:1.1rem;flex:none}
+section{padding:72px 0}
+section+section{border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 36px}
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hello{display:inline-flex;align-items:center;gap:8px;background:var(--soft);padding:6px 14px;border-radius:99px;font-size:.9rem;font-weight:500;margin-bottom:20px}
+.hello i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:block}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.role{font:500 1.25rem var(--head);color:var(--accent);margin:0 0 18px}
+.hero p.about-line{color:var(--muted);max-width:52ch;margin:0 0 28px;font-size:1.05rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+.meta{color:var(--muted);font-size:.95rem;display:flex;flex-wrap:wrap;gap:6px 20px}
+.code{background:var(--code);color:var(--code-ink);border-radius:14px;font:400 .85rem/1.7 var(--mono);box-shadow:0 20px 40px -20px rgba(0,0,0,.45);overflow:hidden}
+.code .top{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid #ffffff1a;color:#8ea3b6;font-size:.8rem}
+.code .top b{color:var(--code-key);font-weight:500}
+.code pre{margin:0;padding:16px 18px;overflow-x:auto;font:inherit}
+.k{color:var(--code-key)}.s{color:var(--code-str)}
+.code pre span.l{display:block;opacity:0;animation:in .4s forwards}
+@keyframes in{to{opacity:1}}
+.grid{display:grid;gap:20px}
+.about{grid-template-columns:1.4fr 1fr}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:1.2rem;margin-bottom:10px}
+.card p{margin:0 0 12px;color:var(--muted)}
+.card p:last-child{margin:0}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.facts li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.facts li:last-child{border:0;padding:0}
+.facts span{color:var(--muted)}
+.facts b{font-weight:600;text-align:right}
+.skills{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--soft);padding:6px 12px;border-radius:8px;font-size:.92rem;font-weight:500}
+.projects{grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.proj{display:flex;flex-direction:column}
+.proj h3{font-size:1.3rem}
+.proj ul{padding-left:18px;margin:12px 0 18px;color:var(--muted)}
+.proj li{margin-bottom:6px}
+.proj .chips{margin-top:auto}
+.proj .chips li{font:500 .78rem var(--mono);background:transparent;border:1px solid var(--line);padding:4px 9px}
+.tag{font:500 .8rem var(--mono);color:var(--accent);margin-bottom:8px;display:block}
+.edu{grid-template-columns:1.2fr 1fr 1fr}
+.edu .big{font:700 1.35rem var(--head);margin:0 0 6px;color:var(--ink)}
+.lang{display:grid;gap:12px;list-style:none;padding:0;margin:0}
+.lang li{display:flex;justify-content:space-between;align-items:center}
+.lvl{display:flex;gap:4px}
+.lvl i{width:22px;height:6px;border-radius:3px;background:var(--line)}
+.lvl i.on{background:var(--accent)}
+.contact{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.contact a{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;transition:border-color .15s}
+.contact a:hover{border-color:var(--accent)}
+.contact small{display:block;color:var(--muted);margin-bottom:4px}
+.contact b{font-weight:600;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
+@media (max-width:820px){.hero .wrap,.about,.edu{grid-template-columns:1fr}.hero{padding-top:36px}section{padding:56px 0}.bar{gap:8px}.logo{font-size:1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.code pre span.l{animation:none;opacity:1}.btn{transition:none}}
+
+.avatar{display:block;width:136px;height:136px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 0 7px var(--soft);margin:0 0 26px 7px;background:#fff}
+.ban{display:block;width:100%;height:auto;border-radius:10px;background:var(--soft);margin-bottom:18px}
+.ban .a{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ban .d{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:6 7;stroke-linecap:round}
+.ban .af{fill:var(--accent)}
+.ban .s{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.ban .lf{fill:var(--line)}
+.ban .l{stroke:var(--line);stroke-width:1.5;fill:none}
+.ban .w{fill:none;stroke:var(--accent-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+.ban{background:#fff;border:1px solid var(--line)}
+svg.ban text{font-family:var(--body)}
+body{overflow-x:hidden}
+.projects{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.skills{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.contact{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.contact b{word-break:normal;overflow-wrap:anywhere}
+.facts li{flex-wrap:wrap}
+.lang li{gap:12px}
+@media (max-width:640px){
+.bar{flex-wrap:wrap;height:auto;padding:10px 20px 6px;gap:6px 8px}
+.logo{order:1;flex:1}#theme{order:2;width:36px;height:36px}
+nav{order:3;width:100%;margin:0;justify-content:space-between}
+nav a{padding:6px 8px;font-size:.88rem}
+html{scroll-padding-top:calc(104px + env(safe-area-inset-top,0px))}
+.wrap{padding:0 16px}.card{padding:18px}
+section{padding:44px 0}.hero{padding:28px 0 44px}
+.avatar{width:112px;height:112px;margin-bottom:22px}
+.btns .btn{flex:1 1 140px;text-align:center}
+.meta{flex-direction:column;gap:2px}
+.code{font-size:.72rem}
+.contact a{padding:16px}
+footer{padding:22px 0 26px}
+}
+@media (max-width:360px){nav a{padding:6px 5px;font-size:.8rem}h1{font-size:2.3rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top">Harish Shiyani</a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+<button id="theme" aria-label="Switch light or dark theme" title="Switch theme">◐</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<img class="avatar" src="images/profile.jpg" alt="Harish Shiyani" width="136" height="136"><span class="hello"><i></i>Open to entry-level roles</span>
+<h1>Harish Shiyani</h1>
+<p class="role">Java Developer &amp; Full Stack Developer</p>
+<p class="about-line">I build web applications with Java, Spring Boot and MySQL: clean REST APIs on the backend and responsive pages on the front.</p>
+<div class="btns"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="#contact">Contact me</a></div>
+<div class="meta"><span>Ahmedabad, Gujarat, India</span><span>BCA graduate, 2026</span></div>
+</div>
+<div class="code" aria-label="Profile shown as an API response">
+<div class="top"><b>GET</b> /api/developer/harish <span style="margin-left:auto">200 OK</span></div>
+<pre><span class="l" style="animation-delay:.2s">{</span><span class="l" style="animation-delay:.4s">  <span class="k">"name"</span>: <span class="s">"Harish Shiyani"</span>,</span><span class="l" style="animation-delay:.6s">  <span class="k">"role"</span>: <span class="s">"Java / Full Stack Developer"</span>,</span><span class="l" style="animation-delay:.8s">  <span class="k">"backend"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"REST API"</span>],</span><span class="l" style="animation-delay:1s">  <span class="k">"database"</span>: <span class="s">"MySQL"</span>,</span><span class="l" style="animation-delay:1.2s">  <span class="k">"frontend"</span>: [<span class="s">"HTML5"</span>, <span class="s">"CSS3"</span>, <span class="s">"JavaScript"</span>],</span><span class="l" style="animation-delay:1.4s">  <span class="k">"education"</span>: <span class="s">"BCA, 2026"</span>,</span><span class="l" style="animation-delay:1.6s">  <span class="k">"location"</span>: <span class="s">"Ahmedabad, India"</span>,</span><span class="l" style="animation-delay:1.8s">  <span class="k">"available"</span>: <span class="k">true</span></span><span class="l" style="animation-delay:2s">}</span></pre>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<p class="lead">A motivated BCA graduate who enjoys backend development and turning ideas into working applications.</p>
+<div class="grid about">
+<div class="card">
+<h3>Professional summary</h3>
+<p>I am a BCA graduate with strong knowledge of Java, Spring Boot, REST APIs, MySQL, HTML, CSS and JavaScript. I have built web applications and database-driven projects with a focus on backend development, API integration and responsive frontend design.</p>
+<h3 style="margin-top:20px">Career objective</h3>
+<p>I am looking for an entry-level Java / Full Stack Developer role where I can apply my knowledge of Java, Spring Boot, web development and database technologies, gain practical industry experience and contribute to the organization's success.</p>
+</div>
+<div class="card"><h3>Quick facts</h3>
+<ul class="facts">
+<li><span>Role</span><b>Java / Full Stack Developer</b></li>
+<li><span>Level</span><b>Fresher</b></li>
+<li><span>Degree</span><b>BCA, 2026</b></li>
+<li><span>Location</span><b>Ahmedabad, Gujarat</b></li>
+<li><span>Projects</span><b>4 built</b></li>
+</ul></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills &amp; tools</h2>
+<p class="lead">The technologies I use to design, build and ship web applications.</p>
+<div class="grid skills">
+<div class="card"><h3>Backend</h3><ul class="chips"><li>Java</li><li>Spring Boot</li><li>REST API</li><li>JDBC</li><li>PHP</li></ul></div>
+<div class="card"><h3>Frontend</h3><ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li></ul></div>
+<div class="card"><h3>Database</h3><ul class="chips"><li>MySQL</li></ul></div>
+<div class="card"><h3>Concepts</h3><ul class="chips"><li>OOP</li><li>MVC Architecture</li><li>Layered architecture</li></ul></div>
+<div class="card"><h3>Tools &amp; technologies</h3><ul class="chips"><li>VS Code</li><li>Eclipse</li><li>IntelliJ IDEA</li><li>Git</li><li>GitHub</li><li>Antigravity</li></ul></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<p class="lead">Full-stack and database-driven applications I have built.</p>
+<div class="grid projects">
+<article class="card proj"><svg class="ban" viewBox="0 0 480 270" role="img" aria-label="SkyWings flight search screen"><rect x="0" y="0" width="480" height="270" rx="0" fill="#fff"/><rect x="0" y="0" width="480" height="26" rx="0" fill="#e5e9ef"/><circle cx="14" cy="13" r="3.5" fill="#ff5f57"/><circle cx="26" cy="13" r="3.5" fill="#febc2e"/><circle cx="38" cy="13" r="3.5" fill="#28c840"/><rect x="62" y="6" width="250" height="14" rx="7" fill="#fff"/><text x="72" y="16" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">skywings.app/flights</text><rect x="0" y="26" width="480" height="244" rx="0" fill="#eef3fb"/><rect x="0" y="26" width="480" height="28" rx="0" fill="#fff"/><rect x="0" y="54" width="480" height="1" rx="0" fill="#e5e7eb"/><circle cx="19" cy="40" r="5" fill="#1d4ed8"/><text x="30" y="44" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="start">SkyWings</text><text x="318" y="44" font-size="8.5" font-weight="500" fill="#6b7280" text-anchor="start">Flights</text><text x="364" y="44" font-size="8.5" font-weight="500" fill="#6b7280" text-anchor="start">Bookings</text><text x="422" y="44" font-size="8.5" font-weight="500" fill="#6b7280" text-anchor="start">Sign in</text><rect x="16" y="64" width="448" height="52" rx="8" fill="#fff" stroke="#e3e8ef"/><text x="28" y="81" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">From</text><text x="28" y="95" font-size="8.5" font-weight="600" fill="#1f2937" text-anchor="start">Ahmedabad (AMD)</text><text x="130" y="81" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">To</text><text x="130" y="95" font-size="8.5" font-weight="600" fill="#1f2937" text-anchor="start">Mumbai (BOM)</text><text x="232" y="81" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">Departure</text><text x="232" y="95" font-size="8.5" font-weight="600" fill="#1f2937" text-anchor="start">12 Oct 2026</text><text x="326" y="81" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">Passengers</text><text x="326" y="95" font-size="8.5" font-weight="600" fill="#1f2937" text-anchor="start">1 Adult</text><rect x="396" y="76" width="56" height="28" rx="6" fill="#1d4ed8"/><text x="424" y="93" font-size="8.5" font-weight="600" fill="#fff" text-anchor="middle">Search</text><rect x="16" y="126" width="448" height="60" rx="8" fill="#fff" stroke="#e3e8ef"/><text x="30" y="148" font-size="9" font-weight="700" fill="#1f2937" text-anchor="start">SW-203</text><text x="30" y="161" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Ahmedabad to Mumbai</text><text x="150" y="156" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">06:15</text><text x="150" y="170" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">AMD</text><rect x="192" y="154" width="56" height="1.5" rx="0" fill="#cbd5e1"/><text x="220" y="149" font-size="7" font-weight="400" fill="#6b7280" text-anchor="middle">1h 25m</text><text x="262" y="156" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">07:40</text><text x="262" y="170" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">BOM</text><text x="352" y="158" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">&#8377;4,250</text><text x="352" y="170" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">per adult</text><rect x="410" y="145" width="42" height="22" rx="6" fill="#1d4ed8"/><text x="431" y="159" font-size="8" font-weight="600" fill="#fff" text-anchor="middle">Book</text><rect x="16" y="194" width="448" height="60" rx="8" fill="#fff" stroke="#e3e8ef"/><text x="30" y="216" font-size="9" font-weight="700" fill="#1f2937" text-anchor="start">SW-117</text><text x="30" y="229" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Ahmedabad to Mumbai</text><rect x="30" y="235" width="46" height="12" rx="6" fill="#dcfce7"/><text x="53" y="244" font-size="6.5" font-weight="600" fill="#15803d" text-anchor="middle">Cheapest</text><text x="150" y="224" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">14:30</text><text x="150" y="238" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">AMD</text><rect x="192" y="222" width="56" height="1.5" rx="0" fill="#cbd5e1"/><text x="220" y="217" font-size="7" font-weight="400" fill="#6b7280" text-anchor="middle">1h 25m</text><text x="262" y="224" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">15:55</text><text x="262" y="238" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">BOM</text><text x="352" y="226" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">&#8377;3,980</text><text x="352" y="238" font-size="6.5" font-weight="400" fill="#6b7280" text-anchor="start">per adult</text><rect x="410" y="213" width="42" height="22" rx="6" fill="#1d4ed8"/><text x="431" y="227" font-size="8" font-weight="600" fill="#fff" text-anchor="middle">Book</text></svg><span class="tag">Spring Boot · Full stack</span><h3>SkyWings: Flight Booking &amp; Reservation System</h3>
+<ul><li>Flight booking and reservation web app built with Java Spring Boot and MySQL.</li><li>REST APIs for flights, bookings, passengers and reservations.</li><li>Responsive frontend integrated with the Spring Boot backend.</li><li>Layered architecture with Controller, Service and Repository layers.</li></ul>
+<ul class="chips"><li>Java</li><li>Spring Boot</li><li>REST API</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article>
+
+<article class="card proj"><svg class="ban" viewBox="0 0 480 270" role="img" aria-label="Job and placement dashboard screen"><rect x="0" y="0" width="480" height="270" rx="0" fill="#fff"/><rect x="0" y="0" width="480" height="26" rx="0" fill="#e5e9ef"/><circle cx="14" cy="13" r="3.5" fill="#ff5f57"/><circle cx="26" cy="13" r="3.5" fill="#febc2e"/><circle cx="38" cy="13" r="3.5" fill="#28c840"/><rect x="62" y="6" width="250" height="14" rx="7" fill="#fff"/><text x="72" y="16" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">placement.app/dashboard</text><rect x="0" y="26" width="480" height="244" rx="0" fill="#f0f5f4"/><rect x="0" y="26" width="84" height="244" rx="0" fill="#0f3d3a"/><text x="12" y="46" font-size="8" font-weight="700" fill="#fff" text-anchor="start">Placement Portal</text><rect x="8" y="62" width="68" height="18" rx="5" fill="#1f6b64"/><text x="16" y="74" font-size="7.5" font-weight="500" fill="#fff" text-anchor="start">Dashboard</text><text x="16" y="96" font-size="7.5" font-weight="500" fill="#a7d3cf" text-anchor="start">Students</text><text x="16" y="118" font-size="7.5" font-weight="500" fill="#a7d3cf" text-anchor="start">Companies</text><text x="16" y="140" font-size="7.5" font-weight="500" fill="#a7d3cf" text-anchor="start">Job Openings</text><text x="16" y="162" font-size="7.5" font-weight="500" fill="#a7d3cf" text-anchor="start">Placement Drives</text><text x="100" y="46" font-size="11" font-weight="700" fill="#1f2937" text-anchor="start">Placement Overview</text><text x="464" y="46" font-size="8" font-weight="500" fill="#6b7280" text-anchor="end">Batch 2026</text><rect x="96" y="56" width="118" height="44" rx="8" fill="#fff" stroke="#dde7e5"/><text x="106" y="72" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Total Students</text><text x="106" y="92" font-size="16" font-weight="700" fill="#0f766e" text-anchor="start">240</text><rect x="222" y="56" width="118" height="44" rx="8" fill="#fff" stroke="#dde7e5"/><text x="232" y="72" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Placed</text><text x="232" y="92" font-size="16" font-weight="700" fill="#0f766e" text-anchor="start">168</text><rect x="348" y="56" width="118" height="44" rx="8" fill="#fff" stroke="#dde7e5"/><text x="358" y="72" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Companies</text><text x="358" y="92" font-size="16" font-weight="700" fill="#0f766e" text-anchor="start">32</text><rect x="96" y="110" width="370" height="150" rx="8" fill="#fff" stroke="#dde7e5"/><text x="108" y="128" font-size="9" font-weight="700" fill="#1f2937" text-anchor="start">Recent placements</text><text x="108" y="146" font-size="7" font-weight="500" fill="#6b7280" text-anchor="start">Student</text><text x="200" y="146" font-size="7" font-weight="500" fill="#6b7280" text-anchor="start">Company</text><text x="290" y="146" font-size="7" font-weight="500" fill="#6b7280" text-anchor="start">Role</text><text x="404" y="146" font-size="7" font-weight="500" fill="#6b7280" text-anchor="start">Status</text><rect x="108" y="151" width="346" height="1" rx="0" fill="#e5e7eb"/><text x="108" y="168" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Riya Patel</text><text x="200" y="168" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">TechNova</text><text x="290" y="168" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Java Developer</text><rect x="402" y="159" width="50" height="13" rx="6.5" fill="#dcfce7"/><text x="427" y="168" font-size="6.5" font-weight="600" fill="#15803d" text-anchor="middle">Placed</text><text x="108" y="190" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Karan Mehta</text><text x="200" y="190" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">InfoBridge</text><text x="290" y="190" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Backend Intern</text><rect x="402" y="181" width="50" height="13" rx="6.5" fill="#dcfce7"/><text x="427" y="190" font-size="6.5" font-weight="600" fill="#15803d" text-anchor="middle">Placed</text><text x="108" y="212" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Neha Shah</text><text x="200" y="212" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">CodeCraft</text><text x="290" y="212" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">QA Analyst</text><rect x="402" y="203" width="50" height="13" rx="6.5" fill="#fef3c7"/><text x="427" y="212" font-size="6.5" font-weight="600" fill="#b45309" text-anchor="middle">Interview</text><text x="108" y="234" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Jay Desai</text><text x="200" y="234" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">WebSpark</text><text x="290" y="234" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">PHP Developer</text><rect x="402" y="225" width="50" height="13" rx="6.5" fill="#dbeafe"/><text x="427" y="234" font-size="6.5" font-weight="600" fill="#1d4ed8" text-anchor="middle">Applied</text></svg><span class="tag">Spring Boot · Full stack</span><h3>Job &amp; Placement Management System</h3>
+<ul><li>Full-stack system to manage students, companies, job opportunities and placement drives.</li><li>Tracks placed and unplaced students, applications and placement status across fields.</li><li>REST APIs in Spring Boot connected to the frontend and MySQL.</li><li>Layered design with Controller, Service, Repository and Entity components.</li></ul>
+<ul class="chips"><li>Java</li><li>Spring Boot</li><li>REST API</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article>
+
+<article class="card proj"><svg class="ban" viewBox="0 0 480 270" role="img" aria-label="Student management records screen"><rect x="0" y="0" width="480" height="270" rx="0" fill="#fff"/><rect x="0" y="0" width="480" height="26" rx="0" fill="#e5e9ef"/><circle cx="14" cy="13" r="3.5" fill="#ff5f57"/><circle cx="26" cy="13" r="3.5" fill="#febc2e"/><circle cx="38" cy="13" r="3.5" fill="#28c840"/><rect x="62" y="6" width="250" height="14" rx="7" fill="#fff"/><text x="72" y="16" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">students.app/records</text><rect x="0" y="26" width="480" height="244" rx="0" fill="#f5f6fb"/><rect x="0" y="26" width="480" height="30" rx="0" fill="#4338ca"/><text x="16" y="45" font-size="10" font-weight="700" fill="#fff" text-anchor="start">Student Management</text><text x="464" y="45" font-size="8" font-weight="500" fill="#c7d2fe" text-anchor="end">Admin</text><rect x="16" y="68" width="200" height="22" rx="6" fill="#fff" stroke="#d6dae8"/><text x="28" y="82" font-size="7.5" font-weight="400" fill="#9ca3af" text-anchor="start">Search student...</text><rect x="368" y="68" width="96" height="22" rx="6" fill="#4338ca"/><text x="416" y="82" font-size="8" font-weight="600" fill="#fff" text-anchor="middle">+ Add Student</text><rect x="16" y="100" width="448" height="160" rx="8" fill="#fff" stroke="#e3e8ef"/><rect x="17" y="101" width="446" height="23" rx="7" fill="#eef0fb"/><text x="30" y="116" font-size="7.5" font-weight="700" fill="#4b5563" text-anchor="start">ID</text><text x="70" y="116" font-size="7.5" font-weight="700" fill="#4b5563" text-anchor="start">Name</text><text x="190" y="116" font-size="7.5" font-weight="700" fill="#4b5563" text-anchor="start">Course</text><text x="300" y="116" font-size="7.5" font-weight="700" fill="#4b5563" text-anchor="start">Semester</text><text x="392" y="116" font-size="7.5" font-weight="700" fill="#4b5563" text-anchor="start">Actions</text><text x="30" y="142" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">101</text><text x="70" y="142" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Aarav Joshi</text><text x="190" y="142" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">BCA</text><text x="300" y="142" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">6</text><text x="392" y="142" font-size="7.5" font-weight="600" fill="#4338ca" text-anchor="start">Edit</text><text x="424" y="142" font-size="7.5" font-weight="600" fill="#dc2626" text-anchor="start">Delete</text><rect x="30" y="151" width="420" height="1" rx="0" fill="#eef0f5"/><text x="30" y="165" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">102</text><text x="70" y="165" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Meera Trivedi</text><text x="190" y="165" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">BCA</text><text x="300" y="165" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">6</text><text x="392" y="165" font-size="7.5" font-weight="600" fill="#4338ca" text-anchor="start">Edit</text><text x="424" y="165" font-size="7.5" font-weight="600" fill="#dc2626" text-anchor="start">Delete</text><rect x="30" y="174" width="420" height="1" rx="0" fill="#eef0f5"/><text x="30" y="188" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">103</text><text x="70" y="188" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Dev Parmar</text><text x="190" y="188" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">BBA</text><text x="300" y="188" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">4</text><text x="392" y="188" font-size="7.5" font-weight="600" fill="#4338ca" text-anchor="start">Edit</text><text x="424" y="188" font-size="7.5" font-weight="600" fill="#dc2626" text-anchor="start">Delete</text><rect x="30" y="197" width="420" height="1" rx="0" fill="#eef0f5"/><text x="30" y="211" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">104</text><text x="70" y="211" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Hetal Rana</text><text x="190" y="211" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">BCA</text><text x="300" y="211" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">2</text><text x="392" y="211" font-size="7.5" font-weight="600" fill="#4338ca" text-anchor="start">Edit</text><text x="424" y="211" font-size="7.5" font-weight="600" fill="#dc2626" text-anchor="start">Delete</text><rect x="30" y="220" width="420" height="1" rx="0" fill="#eef0f5"/><text x="30" y="234" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">105</text><text x="70" y="234" font-size="7.5" font-weight="600" fill="#1f2937" text-anchor="start">Yash Solanki</text><text x="190" y="234" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">BCom</text><text x="300" y="234" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">4</text><text x="392" y="234" font-size="7.5" font-weight="600" fill="#4338ca" text-anchor="start">Edit</text><text x="424" y="234" font-size="7.5" font-weight="600" fill="#dc2626" text-anchor="start">Delete</text></svg><span class="tag">C# · Database</span><h3>Student Management System</h3>
+<ul><li>Web-based application for efficient student record management.</li><li>Full CRUD: create, read, update and delete records.</li><li>MySQL database for secure, organized data management.</li><li>Responsive, user-friendly interface for administrators.</li></ul>
+<ul class="chips"><li>C#</li><li>MySQL</li></ul></article>
+
+<article class="card proj"><svg class="ban" viewBox="0 0 480 270" role="img" aria-label="Student portfolio dashboard screen"><rect x="0" y="0" width="480" height="270" rx="0" fill="#fff"/><rect x="0" y="0" width="480" height="26" rx="0" fill="#e5e9ef"/><circle cx="14" cy="13" r="3.5" fill="#ff5f57"/><circle cx="26" cy="13" r="3.5" fill="#febc2e"/><circle cx="38" cy="13" r="3.5" fill="#28c840"/><rect x="62" y="6" width="250" height="14" rx="7" fill="#fff"/><text x="72" y="16" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="start">portfolio.app/profile</text><rect x="0" y="26" width="480" height="244" rx="0" fill="#f8f5fd"/><rect x="0" y="26" width="480" height="30" rx="0" fill="#fff"/><rect x="0" y="56" width="480" height="1" rx="0" fill="#e9e3f5"/><text x="16" y="45" font-size="10" font-weight="700" fill="#6d28d9" text-anchor="start">My Portfolio</text><text x="300" y="45" font-size="8.5" font-weight="600" fill="#6d28d9" text-anchor="start">Profile</text><text x="346" y="45" font-size="8.5" font-weight="500" fill="#6b7280" text-anchor="start">Academics</text><text x="410" y="45" font-size="8.5" font-weight="500" fill="#6b7280" text-anchor="start">Projects</text><rect x="16" y="68" width="150" height="192" rx="10" fill="#fff" stroke="#e9e3f5"/><circle cx="91" cy="106" r="24" fill="#7c3aed"/><text x="91" y="111" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">AJ</text><text x="91" y="148" font-size="10" font-weight="700" fill="#1f2937" text-anchor="middle">Aarav Joshi</text><text x="91" y="161" font-size="7.5" font-weight="400" fill="#6b7280" text-anchor="middle">BCA Student</text><rect x="30" y="176" width="36" height="14" rx="7" fill="#ede9fe"/><text x="48" y="186" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">Java</text><rect x="72" y="176" width="36" height="14" rx="7" fill="#ede9fe"/><text x="90" y="186" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">PHP</text><rect x="114" y="176" width="36" height="14" rx="7" fill="#ede9fe"/><text x="132" y="186" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">MySQL</text><rect x="30" y="196" width="36" height="14" rx="7" fill="#ede9fe"/><text x="48" y="206" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">HTML</text><rect x="72" y="196" width="36" height="14" rx="7" fill="#ede9fe"/><text x="90" y="206" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">CSS</text><rect x="114" y="196" width="36" height="14" rx="7" fill="#ede9fe"/><text x="132" y="206" font-size="7" font-weight="600" fill="#6d28d9" text-anchor="middle">JS</text><rect x="30" y="224" width="122" height="22" rx="6" fill="#6d28d9"/><text x="91" y="238" font-size="8" font-weight="600" fill="#fff" text-anchor="middle">Edit Profile</text><rect x="178" y="68" width="92" height="42" rx="8" fill="#fff" stroke="#e9e3f5"/><text x="188" y="84" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Projects</text><text x="188" y="102" font-size="14" font-weight="700" fill="#6d28d9" text-anchor="start">4</text><rect x="274" y="68" width="92" height="42" rx="8" fill="#fff" stroke="#e9e3f5"/><text x="284" y="84" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Skills</text><text x="284" y="102" font-size="14" font-weight="700" fill="#6d28d9" text-anchor="start">8</text><rect x="370" y="68" width="92" height="42" rx="8" fill="#fff" stroke="#e9e3f5"/><text x="380" y="84" font-size="7" font-weight="400" fill="#6b7280" text-anchor="start">Attendance</text><text x="380" y="102" font-size="14" font-weight="700" fill="#6d28d9" text-anchor="start">92%</text><rect x="178" y="120" width="284" height="140" rx="10" fill="#fff" stroke="#e9e3f5"/><text x="192" y="140" font-size="9" font-weight="700" fill="#1f2937" text-anchor="start">Academic progress</text><text x="192" y="162" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Semester 3</text><rect x="262" y="155" width="150" height="8" rx="4" fill="#ede9fe"/><rect x="262" y="155" width="114.0" height="8" rx="4" fill="#7c3aed"/><text x="450" y="162" font-size="7.5" font-weight="600" fill="#6d28d9" text-anchor="end">76%</text><text x="192" y="186" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Semester 4</text><rect x="262" y="179" width="150" height="8" rx="4" fill="#ede9fe"/><rect x="262" y="179" width="121.5" height="8" rx="4" fill="#7c3aed"/><text x="450" y="186" font-size="7.5" font-weight="600" fill="#6d28d9" text-anchor="end">81%</text><text x="192" y="210" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Semester 5</text><rect x="262" y="203" width="150" height="8" rx="4" fill="#ede9fe"/><rect x="262" y="203" width="126.0" height="8" rx="4" fill="#7c3aed"/><text x="450" y="210" font-size="7.5" font-weight="600" fill="#6d28d9" text-anchor="end">84%</text><text x="192" y="234" font-size="7.5" font-weight="400" fill="#1f2937" text-anchor="start">Semester 6</text><rect x="262" y="227" width="150" height="8" rx="4" fill="#ede9fe"/><rect x="262" y="227" width="132.0" height="8" rx="4" fill="#7c3aed"/><text x="450" y="234" font-size="7.5" font-weight="600" fill="#6d28d9" text-anchor="end">88%</text></svg><span class="tag">PHP · Web app</span><h3>Student Portfolio Management System</h3>
+<ul><li>Platform for managing student profiles and academic information.</li><li>User authentication and profile management features.</li><li>Responsive dashboard pages for easy data access and updates.</li><li>Optimized database operations for better performance.</li></ul>
+<ul class="chips"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li></ul></article>
+</div></div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education &amp; strengths</h2>
+<p class="lead">My academic background, the strengths I bring to a team, and the languages I speak.</p>
+<div class="grid edu">
+<div class="card"><h3>Education</h3><p class="big">Bachelor of Computer Applications (BCA)</p><p>Shree V. J. Modha College of Information &amp; Technology</p><p>Graduated: 2026</p></div>
+<div class="card"><h3>Strengths</h3><ul class="chips"><li>Quick learner</li><li>Problem solver</li><li>Self-motivated</li><li>Team player</li></ul></div>
+<div class="card"><h3>Languages</h3><ul class="lang">
+<li>Gujarati <span class="lvl" title="Native"><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+<li>Hindi <span class="lvl" title="Fluent"><i class="on"></i><i class="on"></i><i></i></span></li>
+<li>English <span class="lvl" title="Basic"><i class="on"></i><i></i><i></i></span></li>
+</ul><p style="margin-top:12px;font-size:.88rem">Gujarati: native · Hindi: fluent · English: basic</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Let's work together</h2>
+<p class="lead">I am looking for an entry-level Java / Full Stack Developer role. Reach out through any of these.</p>
+<div class="grid contact">
+<a href="mailto:harishshiyani83@gmail.com"><small>Email</small><b>harishshiyani83@gmail.com</b></a>
+<a href="tel:+916353238535"><small>Phone</small><b>+91 63532 38535</b></a>
+<a href="https://linkedin.com/in/harish-shiyani" target="_blank" rel="noopener"><small>LinkedIn</small><b>linkedin.com/in/harish-shiyani</b></a>
+<a href="https://github.com/harishshiyani" target="_blank" rel="noopener"><small>GitHub</small><b>github.com/harishshiyani</b></a>
+<a href="https://www.google.com/maps/search/Ahmedabad,+Gujarat,+India" target="_blank" rel="noopener"><small>Location</small><b>Ahmedabad, Gujarat, India</b></a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Harish Shiyani. Built with Java passion and a little HTML.</div></footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
+btn.addEventListener('click',function(){
+var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+try{localStorage.setItem('theme',next)}catch(e){}
+});
+})();
+</script>
+</body>
+</html>
